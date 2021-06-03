@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(-45deg, #fdfdfd 40%, #cfcfcf 60%);
+}
+
+.comming {
+  font-size: 140px;
+  font-family: "Pattaya", sans-serif;
+  margin-bottom: 40px;
+  color: #cfcfcf;
+}
+.titulo-pelicula {
+  color: #d9f5e8;
+  font-size: 60px;
+  font-family: "Open Sans", sans-serif;
+  display: inline;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.linea-division {
+  width: 30%;
+  height: 6px;
+  background-color: hsl(0, 2%, 84%);
+}
+
+/*------------------------------*/
+/* ----- carusel ------------*/
+/*------------------------------*/
+.carousel {
+  min-height: 500px;
+}
+.carousel .carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  width: 500px;
+  height: 500px;
+}
+
+.carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.boton {
+  opacity: 0.8;
+  padding: 5px 5px 5px 5px;
+}
+
+/*--------------------------------------------------*/
+/* ----- carusel listado de peliculas------------*/
+/*--------------------------------------------------*/
+.carousel {
+  top: 30px;
+}
+.carousel__contenedor {
+  position: relative;
+  height: 300px;
+
+  margin-top: 50px;
+  background-color: black;
+}
+
+.carousel__elemento img {
+  z-index: -1;
+
+  height: 150px;
+}
+
+.carousel__anterior,
+.carousel__siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 100px;
+  border: none;
+  /*top: calc(50% - 10px);*/
+  top: 25px;
+  cursor: pointer;
+  line-height: 260px;
+  text-align: center;
+  background: black;
+  color: #fff;
+  opacity: 20%;
+}
+
+.carousel__anterior:hover,
+.carousel__siguiente:hover {
+  opacity: 100%;
+}
+
+.carousel__anterior {
+  left: -10px;
+}
+
+.carousel__siguiente {
+  right: -10px;
+}
+
+.carousel__lista {
+  overflow: hidden;
+  top: 20px;
+  height: 250px;
+}
+/*
+.carousel__elemento {
+   text-align: center;
+}
+*/
+.carousel__indicadores {
+  background: red;
+  height: 2px;
+  margin-left: -5px;
+}
+.carousel__indicadores .glider-dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  opacity: 0.2;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.carousel__indicadores .glider-dot:hover {
+  opacity: 0.5;
+}
+
+.carousel__indicadores .glider-dot.active {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    padding: 40px 0;
+  }
+
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .contenido-principal > * {
+    width: 100%;
+  }
+}
+
+.card {
+  z-index: -1;
+  padding: 3px;
+  border: 1px;
+  border: solid #000;
+  /*  border-color: red;*/
+}
+
+.card-title .cardtitle1 {
+  position: relative;
+  bottom: 5px;
+  left: -2px;
+  padding: 5px;
+  font-size: 20px;
+  color: rgb(204, 236, 61);
+  font-style: italic;
+  font-weight: bold;
+}
+.card-title .cardtitle2 {
+  position: relative;
+  top: 10px;
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.boton-card {
+  position: relative;
+  left: 20%;
+  bottom: -20px;
+  opacity: 0.7;
+  padding: 5px 5px 5px 5px;
+}
+
+.carousel__contenedor .categoria {
+  color: #cfcfcf;
+  font-size: 20px;
+  padding: 20px;
+}

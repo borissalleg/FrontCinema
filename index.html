@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Insertar css-->
+    <link href="./css/main.css" rel="stylesheet" type="text/css" />
+
+    <!--Insertar fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">  -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.css"
+    />
+
+    <title>Static Template</title>
+  </head>
+  <body>
+     <!--Barra de Navegacion-->
+     <nav class="z-depth-4">
+          <div class="nav-wrapper center">
+              <img src="./images/cine.png" height="50px" />
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a href="sass.html">Sass</a></li>
+                  <li><a href="badges.html">Components</a></li>
+                  <li><a href="collapsible.html">JavaScript</a></li>
+               </ul>
+               <a href="#" data-target="slide-out" class="sidenav-trigger">
+                  <i class="material-icons">menu</i>
+               </a>
+        </div>
+     </nav>
+     <!--Menu Burger--> 
+     <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                 <div class="background center-align" id="imgUsr">
+                      <img src="./images/cine.png" height="50px" />
+                  </div>
+                  <a href="#user">
+                    <img class="circle" src="https://randomuser.me/api/portraits/women/17.jpg"/>
+                  </a>
+                  <a href="#name">
+                    <span class="black-text name">
+                      Natalia Ramirez Dueñas
+                    </span>
+                  </a>
+                  <a href="#email">
+                    <span class="email">natiradu@gmail.com</span>
+                 </a>
+             </div>
+         </li>
+         <li>
+             <a href="#!">
+                <i class="material-icons">cloud</i>
+                Premium
+             </a>
+              </li>
+              <li><a href="#!">Second Link</a></li>
+              <li><div class="divider"></div></li>
+              <li><a class="subheader">Subheader</a></li>
+              <li>
+                  <a class="waves-effect" href="#!">Third Link With Waves</a>
+             </li>
+     </ul>
+   <!--IContendor carrusel -->
+    <div class="container z-depth-4">
+      <div class="row">
+        <div class="col s12">
+           <div class="carousel carousel-slider">
+             <!--Item del carrusel -->
+             <div class="carousel-item">
+                 <p class="titulo-pelicula">Pelicula</p>
+                 <div class="linea-division"></div>
+                     <p class="comming">Proximamente...</p>
+                         <span class="boton">
+                             <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                             <i class="material-icons left">play_circle_filled</i >
+                              Reproducir
+                            </a>
+                          </span>
+              <span class="boton"
+                ><a
+                  class="waves-effect waves-light btn-small #212121 grey darken-4"
+                  ><i class="material-icons left">info</i>Mas info</a
+                ></span
+              >
+              <img src="/images/avenger.jpg" />
+            </div>
+            <!--Item del carrusel -->
+            <div class="carousel-item">
+              <p class="titulo-pelicula">Pelicula</p>
+              <div class="linea-division"></div>
+              <p class="comming">Proximamente...</p>
+              <span class="boton"
+                ><a
+                  class="waves-effect waves-light btn-small #212121 grey darken-4"
+                  ><i class="material-icons left">play_circle_filled</i
+                  >Reproducir</a
+                ></span
+              >
+              <span class="boton"
+                ><a
+                  class="waves-effect waves-light btn-small #212121 grey darken-4"
+                  ><i class="material-icons left">info</i>Mas info</a
+                ></span
+              >
+              <img src="/images/corazon-valiente.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--Contenedor del carrusel elaborado con glider-js para colocar las peliculas en un listado y mostrar el nombre, genero y boton -->
+  <div class="container z-depth-4">
+    <div class="row">
+        <div class="col s12 l12 ">
+            <div class="carousel">
+               <div class="carousel__contenedor">
+                   <div class= "categoria" > Categoria - <span class="cienciaf"> Ciencia Ficción </span> </div>
+                       <!--Muestra los indicadores del carrusel -->
+                       <div role="tablist" class="carousel__indicadores"></div>
+                      <!--Boton anterior de la lista de elementos del carrusel -->
+                      <button aria-label="Anterior" class="carousel__anterior">
+                          <i class="material-icons left">keyboard_arrow_left</i>
+                     </button>
+                        <!--Contenedor principal de la lista -->
+                        <div class="carousel__lista">
+                          <!--Pelicula 1 -->
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/avenger.jpg" alt="Rock and Roll Hall of Fame"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Avengers</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Pelicula 2 -->
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/corazonvaliente.jpg" alt="corazonvaliente"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Avengers</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Pelicula 3 -->
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/corazon-valiente.jpg" alt="corazon-valiente"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Avengers</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <!--Pelicula 4 -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/star-war.jpg" alt="star-war"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Star Wars</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Pelicula 5 -->
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/skyfire.jpg" alt="skyfire"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Sky Fire</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <!--Pelicula 6 -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/archenemy.jpg" alt="archenemy
+                                    "/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Archenemy</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <!--Pelicula 7 -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/loveandmonsters.jpg" alt="Love and monsters"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Love and monsters</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Ciencia Ficción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <!--Pelicula 8 -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/bad-boys-for-life.jpg" alt="Bad boys for life "/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Bad boys for life</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Acción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                          <!--Se define el item del carrusel y se envuelve en una card -->
+                          <!--Pelicula 9 -->
+                          <div class="carousel__elemento">
+                              <div class="card"><!--Se define el contenedor de la tarjeta o Card-->
+                                <div class="card-image"> <!-- Contenedor para la imagen y sus elementos -->
+                                    <img src="images/the-outpost.jpg" alt="Rapido y Furioso"/>
+                                    <span class="card-title"> <span class="cardtitle1"/> Rapido y Furioso</span>
+                                    <span class="card-title"><span class="cardtitle2"/>Acción </span>
+                                    <!--Contenedor para boton de mas info, los efectos y alineaciones en css -->  
+                                    <span class="boton-card">
+                                        <a class="waves-effect waves-light btn-small #212121 grey darken-4">
+                                          <i class="material-icons left">info</i>Mas info
+                                        </a>
+                                    </span>             
+                                </div> 
+                              </div>
+                          </div>
+                      </div><!--lista-->
+                      <!--Boton Siguiente de la lista de elementos del carrusel -->
+                      <button aria-label="Siguiente" class="carousel__siguiente">
+                            <i class="material-icons left">keyboard_arrow_right</i></a>
+                      </button>
+                  
+               </div><!-- carusel contenedor-->
+
+
+               
+          </div><!-- carusel -->
+        </div> <!--col-->
+    </div><!--row-->
+
+    
+  </div><!--rcontainer-->
+
+  
+    <!--Footer-->
+    <footer class="page-footer z-depth-4">
+        <div class="container"> </div>
+         <div class="footer-copyright">
+           <div class="container"> 
+           © 2014 Copyright Text
+           <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+           </div>
+         </div>
+     </footer>
+  </body>
+ 
+  <script type="text/javascript" src="./js/materialize.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.7/glider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/2c36e9b7b1.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Compiled and minified JavaScript 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var elems = document.querySelectorAll(".sidenav");
+      var instances = M.Sidenav.init(elems, {});
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  -->
+</html>
